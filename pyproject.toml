@@ -8,6 +8,10 @@ packages = [{include = "langchain_tools_nicovideo"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
+langchain = "^0.0.138"
+nicovideo-api-client = "^2.0.4"
+tiktoken = "^0.3.3"
+html2text = "^2020.1.16"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -15,6 +19,7 @@ pytest = "^7.3.0"
 taskipy = "^1.10.4"
 black = "^23.3.0"
 pyproject-flake8 = "^6.0.0.post1"
+openai = "^0.27.4"
 
 [build-system]
 requires = ["poetry-core"]
@@ -30,5 +35,5 @@ line-length = 88
 
 [tool.taskipy.tasks]
 test = "pytest tests"
-lint = "poetry run pflake8 src test"
-format = "poetry run black src test"
+lint = "poetry run pflake8 langchain_tools_nicovideo tests"
+format = "poetry run black langchain_tools_nicovideo tests"
