@@ -9,7 +9,7 @@ llm = OpenAI(temperature=0)
 tools = load_tools(["human"], llm=llm)
 tools.append(
     NicovideoQueryRun(
-        api_wrapper=NicovideoSnapshotApiWrapper(**{"nicovideo_agent_name": "Test"})
+        api_wrapper=NicovideoSnapshotApiWrapper()
     )
 )
 agent = initialize_agent(
