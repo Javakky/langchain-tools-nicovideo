@@ -204,6 +204,18 @@ jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
 
 [[package]]
+name = "cachetools"
+version = "5.3.0"
+description = "Extensible memoizing collections and decorators"
+category = "main"
+optional = false
+python-versions = "~=3.7"
+files = [
+    {file = "cachetools-5.3.0-py3-none-any.whl", hash = "sha256:429e1a1e845c008ea6c85aa35d4b98b65d6a9763eeef3e37e92728a12d1de9d4"},
+    {file = "cachetools-5.3.0.tar.gz", hash = "sha256:13dfddc7b8df938c21a940dfa6557ce6e94a2f1cdfa58eb90c805721d58f2c14"},
+]
+
+[[package]]
 name = "certifi"
 version = "2022.12.7"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -319,7 +331,7 @@ colorama = {version = "*", markers = "platform_system == \"Windows\""}
 name = "colorama"
 version = "0.4.6"
 description = "Cross-platform colored terminal text."
-category = "dev"
+category = "main"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,!=3.5.*,!=3.6.*,>=2.7"
 files = [
@@ -449,6 +461,23 @@ files = [
 ]
 
 [[package]]
+name = "gptcache"
+version = "0.1.10"
+description = "GPTCache, a powerful caching library that can be used to speed up and lower the cost of chat applications that rely on the LLM service. GPTCache works as a memcache for AIGC applications, similar to how Redis works for traditional applications."
+category = "main"
+optional = false
+python-versions = ">=3.8.1"
+files = [
+    {file = "gptcache-0.1.10-py3-none-any.whl", hash = "sha256:6d5baaed83784164d1cad29423c4e3433a7ae3a8794f7f4785d44ee27691dc19"},
+    {file = "gptcache-0.1.10.tar.gz", hash = "sha256:75f63b181e5ce40aff1859711fe9496bd7569e3b2afcac3ec46cd98a8a0ce974"},
+]
+
+[package.dependencies]
+cachetools = "*"
+numpy = "*"
+openai = "*"
+
+[[package]]
 name = "greenlet"
 version = "2.0.2"
 description = "Lightweight in-process concurrent programming"
@@ -560,19 +589,20 @@ files = [
 
 [[package]]
 name = "langchain"
-version = "0.0.138"
+version = "0.0.139"
 description = "Building applications with LLMs through composability"
 category = "main"
 optional = false
 python-versions = ">=3.8.1,<4.0"
 files = [
-    {file = "langchain-0.0.138-py3-none-any.whl", hash = "sha256:e9ad24c665c328df48a6a3c4c1335d6117d52fcada4f3a4b71ab2161eb2e8c85"},
-    {file = "langchain-0.0.138.tar.gz", hash = "sha256:44f3f3d0819fce055fd859640cafd8af81cc6497daebc2721d1fcf33026fbdf6"},
+    {file = "langchain-0.0.139-py3-none-any.whl", hash = "sha256:2ea43780e1f788333f2b741b119d9870640a92c6f5f2d177d1ca0c98463bd097"},
+    {file = "langchain-0.0.139.tar.gz", hash = "sha256:4ea86ad6192f45c65cbbdc24ff1a56aaac4bee8c038be982981369ca553590df"},
 ]
 
 [package.dependencies]
 aiohttp = ">=3.8.3,<4.0.0"
 dataclasses-json = ">=0.5.7,<0.6.0"
+gptcache = ">=0.1.7"
 numpy = ">=1,<2"
 openapi-schema-pydantic = ">=1.2,<2.0"
 pydantic = ">=1,<2"
@@ -802,7 +832,7 @@ files = [
 name = "openai"
 version = "0.27.4"
 description = "Python client library for the OpenAI API"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7.1"
 files = [
@@ -1344,7 +1374,7 @@ files = [
 name = "tqdm"
 version = "4.65.0"
 description = "Fast, Extensible Progress Meter"
-category = "dev"
+category = "main"
 optional = false
 python-versions = ">=3.7"
 files = [
@@ -1497,4 +1527,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "582ce79c1e191b6eb09249400f844adfe0daafa9092cae72d521da2214fab7a0"
+content-hash = "eaa03c0c2168a9e2af758a933bea86cd7d387750111978dbfac7adf96bffbe55"
