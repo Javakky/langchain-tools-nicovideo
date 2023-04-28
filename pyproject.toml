@@ -8,7 +8,7 @@ packages = [{include = "langchain_tools_nicovideo"}]
 
 [tool.poetry.dependencies]
 python = "^3.11"
-langchain = "^0.0.138"
+langchain = "^0.0.152"
 nicovideo-api-client = "^2.0.4"
 tiktoken = "^0.3.3"
 html2text = "^2020.1.16"
