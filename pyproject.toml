@@ -16,7 +16,7 @@ html2text = "^2020.1.16"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.3.0"
-taskipy = "^1.10.4"
+taskipy = "^1.11.0"
 black = "^23.3.0"
 pyproject-flake8 = "^6.0.0.post1"
 openai = "^0.27.4"
